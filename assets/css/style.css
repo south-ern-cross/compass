@@ -525,7 +525,8 @@ a:hover { color: var(--gold); }
 .status-box.warning strong { color: var(--accent-strong); }
 .affiliate-note, .affiliate-note[style] { color: var(--muted) !important; }
 th { background: var(--accent-soft); color: var(--accent-strong); }
-td, th { overflow-wrap: anywhere; }
+td { overflow-wrap: anywhere; }
+th { white-space: nowrap; } /* key-facts labels never break mid-word (29.09.2026) */
 table { display: block; overflow-x: auto; }
 select:focus, input:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
 
