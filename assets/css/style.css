@@ -143,6 +143,8 @@ p { color: var(--text); }
 }
 .nav-links a { color: var(--muted); font-size: 0.92rem; font-weight: 500; }
 .nav-links a:hover { color: var(--gold-light); text-decoration: none; }
+/* Blog first in the header nav (29.09.2026) */
+.nav-links li:has(a[href*="blog"]) { order:-1; }
 
 main { min-height: 60vh; padding-bottom: 40px; }
 
