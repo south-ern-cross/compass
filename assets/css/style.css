@@ -574,6 +574,10 @@ main.has-article-toplist > .container { flex: 1 1 0; min-width: 0; max-width: no
 .article-toplist .toplist-num { color: var(--accent-strong); font-weight: 800; min-width: 24px; }
 .article-toplist .toplist-name { font-weight: 700; flex: 1; }
 .article-toplist .toplist-cta { color: var(--on-accent); font-weight: 800; background: var(--cta-bg); border-radius: 6px; padding: 4px 6px; }
+.related-posts { margin: 28px 0 8px; padding: 18px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; }
+.related-posts h2 { font-size: 1.1rem; margin: 0 0 10px; }
+.related-posts ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.related-posts a { font-weight: 600; }
 
 footer { margin-top: 0; }
 .footer-brand { padding: 0 0 14px; margin-bottom: 18px; border-bottom: 1px solid var(--border); }
@@ -601,9 +605,9 @@ main .hero, main > .container, .home-sidebar, .article-toplist { animation: gent
 @media (max-width: 900px) {
   .homepage-layout { flex-direction: column; }
   html[data-theme] .home-sidebar { order: -1; position: static; width: 100%; flex: none; }
-  main.has-article-toplist > .container { flex-basis: 100%; order: 2; }
+  main.has-article-toplist > .container { flex-basis: 100%; order: 1; }
   main.has-article-toplist > .hero { order: 0; }
-  .article-toplist { order: 1; position: static; flex-basis: 100%; width: 100%; }
+  .article-toplist { order: 2; position: static; flex-basis: 100%; width: 100%; }
 }
 @media (max-width: 640px) {
   .nav { flex-direction: row; align-items: center; min-height: 0; padding-block: 10px; gap: 6px 10px; }
