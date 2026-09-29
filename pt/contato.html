@@ -31,7 +31,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://spinorawins.com/"
+          "item": "https://spinorawins.com/pt/"
         },
         {
           "@type": "ListItem",
@@ -70,7 +70,7 @@
 <div class="container">
   <div class="breadcrumbs"><a href="/pt/">Início</a> / Contato</div>
   <h1>Fale com a gente</h1>
-  <p style="color:var(--muted);max-width:650px;">Dúvida editorial, proposta de parceria ou alguma correção? Mande um e-mail — lemos todas as mensagens e respondemos assim que der.</p>
+  <p style="color:var(--muted);max-width:650px;">Dúvida editorial, proposta de parceria ou alguma correção? Mande um e-mail - lemos todas as mensagens e respondemos assim que der.</p>
   <p>Mande um e-mail direto para <a href="mailto:contact@spinorawins.com">contact@spinorawins.com</a>.</p>
 
   <div style="max-width:560px;margin-top:24px;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:24px;">
@@ -124,7 +124,7 @@
       var messageEl = document.getElementById('contact-message');
       var honeyEl = form.querySelector('input[name="_honey"]');
       if (honeyEl && honeyEl.value) {
-        show('Obrigado — sua mensagem foi enviada.', true);
+        show('Obrigado - sua mensagem foi enviada.', true);
         form.reset();
         return;
       }
@@ -148,7 +148,7 @@
         .then(function (res) {
           var ok = res.ok && (res.json.success === true || res.json.success === 'true');
           if (ok) {
-            show('Obrigado — sua mensagem foi enviada. Vamos analisar em breve.', true);
+            show('Obrigado - sua mensagem foi enviada. Vamos analisar em breve.', true);
             form.reset();
           } else {
             show('Algo deu errado ao enviar sua mensagem. Mande um e-mail direto para contact@spinorawins.com.', false);
