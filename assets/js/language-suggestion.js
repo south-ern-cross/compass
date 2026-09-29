@@ -33,7 +33,9 @@
 
 (() => {
   const banner = document.getElementById('language-suggestion');
-  if (!banner || sessionStorage.getItem('spinora-language-suggestion-dismissed')) return;
+  let dismissed = false;
+  try { dismissed = !!sessionStorage.getItem('spinora-language-suggestion-dismissed'); } catch (e) {}
+  if (!banner || dismissed) return;
   const current = document.documentElement.lang.slice(0, 2).toLowerCase();
   const preferred = (navigator.languages || [navigator.language || ''])
     .map(value => value.slice(0, 2).toLowerCase())
@@ -48,7 +50,7 @@
   banner.hidden = false;
   document.getElementById('language-suggestion-close').addEventListener('click', () => {
     banner.hidden = true;
-    sessionStorage.setItem('spinora-language-suggestion-dismissed', '1');
+    try { sessionStorage.setItem('spinora-language-suggestion-dismissed', '1'); } catch (e) {}
   });
 })();
 
