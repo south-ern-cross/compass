@@ -21,7 +21,8 @@ Pages are static HTML. Shared parts are maintained by idempotent scripts in `scr
 9. `python3 scripts/img_dims.py` – width/height on local images
 10. `python3 scripts/author.py` – unified JSON-LD author
 11. `python3 scripts/helplines.py` – helpline table on responsible-gambling pages (data: `HELPLINES` in `site_config.py`, also used in the footer)
-12. `python3 scripts/check_site.py` – broken links, hreflang reciprocity, sitemap, h1, `/go/` rel
+12. `python3 scripts/cards.py` – brand logos on all casino cards (map: `BRANDS`)
+13. `python3 scripts/check_site.py` – broken links, hreflang reciprocity, sitemap, h1, `/go/` rel
 
 Styles live in one file: `assets/css/style.css` (design tokens at the top). Bump `?v=` in
 `normalize_html.py` when it changes. Affiliate redirects in `go/` are never touched by the scripts.
