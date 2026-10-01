@@ -21,8 +21,6 @@ BLOCK_RE = re.compile(r"\n?" + re.escape(START) + r".*?" + re.escape(END), re.S)
 COUNTRIES = {
     "nigeria": ["online-casinos-nigeria.html", "best-online-casinos-nigeria.html", "best-bitcoin-casinos-nigeria.html",
                 "crypto-casino-bonuses-nigeria.html", "payment-methods/nigeria-casino-deposits.html", "guides/nigeria/*"],
-    "brazil": ["online-casinos-brazil.html", "best-online-casinos-brazil.html", "best-crypto-casinos-brazil.html",
-               "crypto-casino-bonuses-brazil.html", "payment-methods/pix-brazil-casinos.html", "guides/brazil/*"],
     "mexico": ["online-casinos-mexico.html", "best-online-casinos-mexico.html", "best-crypto-casinos-mexico.html",
                "crypto-casino-bonuses-mexico.html", "payment-methods/spei-mexico-casinos.html", "guides/mexico/*"],
     "colombia": ["online-casinos-colombia.html", "best-online-casinos-colombia.html", "best-crypto-casinos-colombia.html",
@@ -31,13 +29,11 @@ COUNTRIES = {
               "crypto-casino-bonuses-kenya.html", "guides/kenya/*"],
     "south-africa": ["online-casinos-south-africa.html", "best-online-casinos-south-africa.html", "best-crypto-casinos-south-africa.html",
                      "crypto-casino-bonuses-south-africa.html", "guides/south-africa/*"],
-    "india": ["online-casinos-india.html", "best-online-casinos-india.html", "best-crypto-casinos-india.html", "guides/india/*"],
 }
 COUNTRY_NAMES = {
-    "nigeria": ("Nigeria", "Nigeria", "Nigéria"), "brazil": ("Brazil", "Brasil", "Brasil"),
+    "nigeria": ("Nigeria", "Nigeria", "Nigéria"),
     "mexico": ("Mexico", "México", "México"), "colombia": ("Colombia", "Colombia", "Colômbia"),
     "kenya": ("Kenya", "Kenia", "Quênia"), "south-africa": ("South Africa", "Sudáfrica", "África do Sul"),
-    "india": ("India", "India", "Índia"),
 }
 CRYPTO = ["top-10-crypto-casinos.html", "new-crypto-casinos.html", "best-bitcoin-casinos.html", "best-ethereum-casinos.html",
           "usdt-tether-casinos.html", "no-kyc-crypto-casinos.html", "best-instant-withdrawal-crypto-casinos.html",

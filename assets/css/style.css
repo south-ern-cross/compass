@@ -486,10 +486,15 @@ main.has-article-toplist > .container { min-width: 0; max-width: none; padding: 
 @media (min-width: 769px) {
   .sq-rank .sq-card:nth-child(n+5) { content-visibility: auto; contain-intrinsic-size: auto 150px; }
 }
-@media (max-width: 1100px) {
+@media (min-width: 1201px) {
+  .nav-links { flex-wrap: nowrap; }
+}
+@media (max-width: 1440px) {
+  .nav { gap: 12px; }
+  .nav-links { gap: 2px; }
   .nav-links a { padding: 0 7px; font-size: .84rem; }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .nav { flex-wrap: wrap; min-height: 56px; gap: 8px 10px; }
   .brand-lockup { width: 160px; }
   .primary-nav { order: 10; flex: 1 0 100%; margin: 0; }
