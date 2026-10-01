@@ -18,69 +18,7 @@
 <link rel="alternate" hreflang="x-default" href="https://spinorawins.com/">
 <link rel="alternate" hreflang="es" href="https://spinorawins.com/es/">
 <link rel="alternate" hreflang="pt" href="https://spinorawins.com/pt/">
-<link rel="stylesheet" href="/assets/css/style.css?v=20260925c">
-<link rel="stylesheet" href="/assets/css/banner-slots.css">
-<link rel="stylesheet" href="/assets/css/language.css">
-<style>
-/* --- Homepage two-column layout: content left, compact sticky toplist right --- */
-.age-badge{
-  display:inline-block;border:2px solid var(--gold-light,#f7c948);color:var(--gold-light,#f7c948);
-  font-weight:800;font-size:.8rem;line-height:1;padding:5px 9px;border-radius:50%;
-  vertical-align:middle;margin-left:10px;white-space:nowrap;
-}
-.homepage-layout{display:flex;gap:32px;align-items:flex-start;margin-top:26px;}
-.home-main{flex:1 1 0;min-width:0;}
-.home-intro{margin:0 0 18px;}
-.home-intro p{font-size:1.02rem;margin:0 0 10px;}
-.home-sidebar{
-  width:320px;flex:0 0 320px;position:sticky;top:20px;z-index:10;
-  background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:20px;
-  box-shadow:var(--shadow);
-}
-.home-sidebar h2{margin:0 0 14px;font-size:1.15rem;color:var(--gold-light,#f7c948);}
-/* --- Casino cards v3 (25.09.2026): clean hierarchy, one full-width CTA --- */
-.sq-card{
-  position:relative;display:flex;flex-direction:column;width:100%;max-width:300px;
-  border-radius:14px;overflow:hidden;
-  border:1px solid #2a3350;box-shadow:0 4px 18px rgba(0,0,0,.35);
-  background:#0d1322;
-}
-.sq-banner{position:relative;display:block;width:100%;aspect-ratio:1200/696;overflow:hidden;}
-.sq-banner img{width:100%;height:100%;object-fit:cover;display:block;}
-.sq-body{display:flex;flex-direction:column;gap:9px;padding:16px;background:#0d1322;border-top:1px solid #232c47;}
-.sq-head{display:flex;align-items:center;justify-content:space-between;gap:8px;}
-.sq-head strong{color:#fff;font-size:1.05rem;font-weight:800;line-height:1.2;}
-.sq-stars{color:var(--gold-light,#f7c948);font-size:.85rem;font-weight:700;white-space:nowrap;}
-.sq-bonus{display:block;color:var(--gold-light,#f7c948);font-size:1rem;font-weight:800;line-height:1.3;}
-.sq-sub{display:block;color:var(--muted);font-size:.78rem;line-height:1.4;}
-.sq-facts{display:block;font-size:.74rem;color:var(--muted);}
-.sq-facts b{color:var(--muted);font-weight:600;margin-right:4px;}
-.sq-warn{display:block;font-size:.72rem;color:#fbbf24;line-height:1.4;}
-.sq-bonus-code{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted);background:#151b2e;border:1px dashed #2a3350;border-radius:8px;padding:8px 12px;cursor:pointer;}
-.sq-bonus-code code{color:var(--gold-light,#f7c948);font-weight:800;letter-spacing:.06em;}
-.sq-bonus-code .copy-hint{margin-left:auto;font-size:.68rem;color:var(--muted);}
-.sq-cta{display:block;text-align:center;font-size:.92rem;font-weight:800;color:#0d1322 !important;text-decoration:none;background:var(--gold-light,#f7c948);border-radius:10px;padding:12px;margin-top:2px;}
-.sq-cta:hover{filter:brightness(1.08);}
-.sq-review{display:block;text-align:center;font-size:.78rem;color:var(--muted);text-decoration:none;}
-.sq-review:hover{color:var(--muted);text-decoration:underline;}
-html[data-theme] .sq-card{aspect-ratio:auto;}
-@media (max-width:900px){
-  .sq-rank{align-items:center;}
-}
-.trust-strip{
-  margin:0 0 18px;padding:20px 24px;border:1px solid var(--border);border-radius:14px;background:var(--card-bg);
-}
-.trust-strip h3{margin:0 0 12px;font-size:1.05rem;color:var(--gold-light,#f7c948);}
-.trust-strip ul{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-wrap:wrap;gap:10px 24px;}
-.trust-strip ul li{font-size:.92rem;padding-left:22px;position:relative;}
-.trust-strip ul li::before{content:"✓";position:absolute;left:0;color:var(--gold-light,#f7c948);font-weight:800;}
-.trust-strip .updated{font-size:.82rem;color:var(--muted);margin:0;}
-.affiliate-note{font-size:0.85em;color:var(--muted);margin:0 0 18px;}
-@media (max-width:900px){
-  .homepage-layout{flex-direction:column;}
-  .home-sidebar{width:100%;flex:none;position:static;order:-1;}/* money block first on mobile */
-}
-</style>
+<link rel="stylesheet" href="/assets/css/style.css?v=20261001">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -219,7 +157,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
     <div class="sq-rank">
       <div class="sq-card" data-casino="duelbits">
         <span class="sq-rank-badge">#1</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/duelbits/" rel="nofollow sponsored noopener"><img src="/assets/images/placeholder-duelbits.svg" alt="Duelbits"></a>
+        <a class="sq-banner" href="/go/duelbits/" rel="nofollow sponsored noopener"><img src="/assets/images/placeholder-duelbits.svg" alt="Duelbits" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Duelbits</strong><span class="sq-stars">★ 4.5</span></span>
           <span class="sq-bonus">Hasta 500 giros gratis</span>
@@ -232,7 +170,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="cloudbet">
         <span class="sq-rank-badge">#2</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/cloudbet/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/cloudbet-logo.png" alt="Cloudbet"></a>
+        <a class="sq-banner" href="/go/cloudbet/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/cloudbet-logo.png" alt="Cloudbet" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Cloudbet</strong><span class="sq-stars">★ 4.4</span></span>
           <span class="sq-bonus">Hasta $2,500 en recompensas</span>
@@ -245,7 +183,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="bitstarz">
         <span class="sq-rank-badge">#3</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/bitstarz/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/bitstarz-logo.png" alt="Bitstarz"></a>
+        <a class="sq-banner" href="/go/bitstarz/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/bitstarz-logo.png" alt="Bitstarz" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Bitstarz</strong><span class="sq-stars">★ 4.6</span></span>
           <span class="sq-bonus">100% hasta 1 BTC</span>
@@ -258,7 +196,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="cashy">
         <span class="sq-rank-badge">#4</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/cashy/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/cashy-logo.png" alt="Cashy"></a>
+        <a class="sq-banner" href="/go/cashy/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/cashy-logo.png" alt="Cashy" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Cashy</strong><span class="sq-stars">★ 4.0</span></span>
           <span class="sq-bonus">Bono de bienvenida</span>
@@ -270,7 +208,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="rollbit">
         <span class="sq-rank-badge">#5</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/rollbit/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/rollbit-logo.png" alt="Rollbit"></a>
+        <a class="sq-banner" href="/go/rollbit/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/rollbit-logo.png" alt="Rollbit" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Rollbit</strong><span class="sq-stars">★ 4.3</span></span>
           <span class="sq-bonus">15% de rakeback extra</span>
@@ -283,7 +221,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="n1-casino">
         <span class="sq-rank-badge">#6</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/n1-casino/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/n1-logo.png" alt="N1 Casino"></a>
+        <a class="sq-banner" href="/go/n1-casino/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/n1-logo.png" alt="N1 Casino" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>N1 Casino</strong><span class="sq-stars">★ 4.2</span></span>
           <span class="sq-bonus">Hasta €400 + 200 giros gratis</span>
@@ -296,7 +234,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="vave">
         <span class="sq-rank-badge">#7</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/vave/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/vave-logo.png" alt="Vave"></a>
+        <a class="sq-banner" href="/go/vave/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/vave-logo.png" alt="Vave" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Vave</strong><span class="sq-stars">★ 4.2</span></span>
           <span class="sq-bonus">150% hasta 1.5 BTC + 100 giros</span>
@@ -309,7 +247,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="cooked">
         <span class="sq-rank-badge">#8</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/cooked/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/cooked-logo.png" alt="Cooked"></a>
+        <a class="sq-banner" href="/go/cooked/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/cooked-logo.png" alt="Cooked" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Cooked</strong><span class="sq-stars">★ 4.1</span></span>
           <span class="sq-bonus">100% hasta $1,000</span>
@@ -322,7 +260,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="planbet">
         <span class="sq-rank-badge">#9</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/planbet/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/planbet-logo.png" alt="Planbet"></a>
+        <a class="sq-banner" href="/go/planbet/" rel="nofollow sponsored noopener"><img src="/assets/images/logos/planbet-logo.png" alt="Planbet" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>Planbet</strong><span class="sq-stars">★ 4.0</span></span>
           <span class="sq-bonus">100% hasta €300 + 30 giros</span>
@@ -335,7 +273,7 @@ html[data-theme] .sq-card{aspect-ratio:auto;}
       </div>
       <div class="sq-card" data-casino="22bet">
         <span class="sq-rank-badge">#10</span><span class="sq-ad">AD</span>
-        <a class="sq-banner" href="/go/22bet/" rel="nofollow sponsored noopener"><img src="/assets/images/placeholder-22bet.svg" alt="22Bet"></a>
+        <a class="sq-banner" href="/go/22bet/" rel="nofollow sponsored noopener"><img src="/assets/images/placeholder-22bet.svg" alt="22Bet" decoding="async" loading="lazy"></a>
         <span class="sq-body">
           <span class="sq-head"><strong>22Bet</strong></span>
           <span class="sq-bonus">Hasta €1,500 + 150 giros gratis</span>

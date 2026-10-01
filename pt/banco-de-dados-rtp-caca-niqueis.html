@@ -18,8 +18,7 @@
 <link rel="alternate" hreflang="x-default" href="https://spinorawins.com/tools/slot-rtp-database.html">
 <link rel="alternate" hreflang="es" href="https://spinorawins.com/es/base-datos-rtp-tragamonedas.html">
 <link rel="alternate" hreflang="pt" href="https://spinorawins.com/pt/banco-de-dados-rtp-caca-niqueis.html">
-<link rel="stylesheet" href="/assets/css/style.css?v=20260924e">
-<link rel="stylesheet" href="/assets/css/language.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=20261001">
 <script defer src="/assets/js/rtp-database.js"></script>
 <script type="application/ld+json">
 {
@@ -80,7 +79,7 @@
 </header>
 <main id="main">
 <div class="container">
-  <div class="breadcrumbs"><a href="/pt/">Início</a> / Ferramentas / Banco de dados de RTP</div>
+  <nav class="breadcrumbs" aria-label="Trilha de navegação"><ol><li><a href="/pt/">Início</a></li><li>Ferramentas</li><li aria-current="page">Banco de dados de RTP</li></ol></nav>
   <h1>Banco de dados de RTP de caça-níqueis</h1>
   <p style="color:var(--muted);">Filtre os caça-níqueis por provedor, volatilidade e RTP para achar os jogos que mais valem a pena. Não sabe o que é RTP? <a href="/pt/o-que-e-rtp-e-por-que-importa.html">Leia nosso guia</a>.</p>
 
@@ -101,10 +100,10 @@
     <input type="number" id="f-minrtp" placeholder="RTP mín. %" step="0.1">
   </div>
 
-  <table>
+  <div class="table-wrap"><table>
     <thead><tr><th>Caça-níquel</th><th>Provedor</th><th>RTP</th><th>Volatilidade</th><th>Ganho máx.</th></tr></thead>
     <tbody id="rtp-tbody"></tbody>
-  </table>
+  </table></div>
 
   <div class="status-box">Os dados exibidos são um conjunto de exemplo para demonstração. A versão de produção deveria puxar de um banco de dados de RTP auditado e mantido, com verificação por cassino.</div>
 
