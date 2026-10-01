@@ -106,9 +106,11 @@ def main():
         s = OG_RE.sub("", s)
         if rel in REDIRECT_STUBS or rel in DUPLICATES:
             s = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n?', "", s)
-            if 'name="robots"' not in s:
+            if rel in REDIRECT_STUBS and 'name="robots"' not in s:
                 s = s.replace("<title>", '<meta name="robots" content="noindex, follow">\n<title>', 1)
             if rel in DUPLICATES:
+                # canonical only; noindex + canonical sends mixed signals
+                s = s.replace('<meta name="robots" content="noindex, follow">\n', "")
                 s = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{DUPLICATES[rel]}">', s)
         if rel in ADD_ALTERNATES:
             for l, u in ADD_ALTERNATES[rel].items():
