@@ -28,3 +28,5 @@ Styles live in one file: `assets/css/style.css` (design tokens at the top). Bump
 
 
 Retired markets (Brazil, India, October 2026): `scripts/remove_markets.py` turns the pages in `scripts/removed-pages.txt` into noindex redirect stubs and removes links to them; `scripts/market_text.py` drops those countries from "our markets" lists in copy. Run both before `related_links.py` if pages are regenerated.
+
+Retired language (Portuguese, October 2026): `python3 scripts/retire_language.py pt` turns every `/pt/` page into a noindex redirect stub to its English counterpart and removes `pt` hreflang/links. `LANGS` in `site_config.py` is now `("en", "es")`. To bring PT back, restore `pt/` from git history (before this commit) and add `"pt"` to `LANGS`.

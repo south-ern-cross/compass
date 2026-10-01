@@ -28,8 +28,8 @@ DUPLICATES = {
 REDIRECT_STUBS = {"sweet-bonanza-review.html"}
 # Missing reciprocal hreflang on EN pages whose ES/PT versions already point here
 ADD_ALTERNATES = {
-    "bitstarz-vs-cloudbet.html": {"es": "/es/bitstarz-vs-cloudbet.html", "pt": "/pt/bitstarz-vs-cloudbet.html"},
-    "cloudbet-vs-stake.html": {"es": "/es/cloudbet-vs-stake.html", "pt": "/pt/cloudbet-vs-stake.html"},
+    "bitstarz-vs-cloudbet.html": {"es": "/es/bitstarz-vs-cloudbet.html"},
+    "cloudbet-vs-stake.html": {"es": "/es/cloudbet-vs-stake.html"},
 }
 
 
