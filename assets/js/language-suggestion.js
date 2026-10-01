@@ -54,31 +54,23 @@
   });
 })();
 
-// Mobile hamburger menu (25.09.2026)
+// Mobile menu: the button is rendered in the shared header (scripts/apply_layout.py)
 (function(){
   function initNav(){
-    var nav = document.querySelector('.site-header .nav');
-    var links = document.querySelector('.nav-links');
-    if(!nav || !links) return;
-    var btn = document.querySelector('.nav-toggle');
-    if(!btn){
-      btn = document.createElement('button');
-      btn.className = 'nav-toggle';
-      btn.type = 'button';
-      btn.setAttribute('aria-label', 'Menu');
-      btn.setAttribute('aria-expanded', 'false');
-      btn.innerHTML = '☰';
-      // Insert before language-switch or at end of nav
-      var langSwitch = nav.querySelector('.language-switch');
-      if(langSwitch) nav.insertBefore(btn, langSwitch);
-      else nav.appendChild(btn);
-    }
-    // Always attach the toggle handler to the button (existing or new)
-    btn.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
+    var btn = document.querySelector('.site-header .nav-toggle');
+    var links = document.getElementById('primary-menu');
+    if(!btn || !links) return;
+    function set(open){
+      links.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.innerHTML = open ? '✕' : '☰';
+      btn.setAttribute('aria-label', btn.getAttribute(open ? 'data-label-close' : 'data-label-open') || 'Menu');
+      document.documentElement.classList.toggle('menu-open', open);
+    }
+    btn.addEventListener('click', function(){ set(!links.classList.contains('open')); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && links.classList.contains('open')){ set(false); btn.focus(); }
     });
+    links.addEventListener('click', function(e){ if(e.target.closest('a')) set(false); });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNav);
   else initNav();
@@ -94,11 +86,12 @@
     // Find the main CTA link (first /go/ link in main)
     var ctaLink = document.querySelector('main a[href^="/go/"]');
     var ctaHref = ctaLink ? ctaLink.getAttribute('href') : '/go/duelbits/';
+    var claimLabel = ({es:'Ver oferta', pt:'Ver oferta'})[(document.documentElement.lang||'en').slice(0,2)] || 'Claim';
     var bar = document.createElement('div');
     bar.className = 'slim-bar has-content';
     bar.innerHTML = '<span class="slim-logo">SpinoraWins</span>' +
       '<span class="slim-title">' + title.replace(/</g, '&lt;') + '</span>' +
-      '<a class="slim-cta" href="' + ctaHref + '" rel="nofollow sponsored noopener">Claim</a>';
+      '<a class="slim-cta" href="' + ctaHref + '" rel="nofollow sponsored noopener">' + claimLabel + '</a>';
     document.body.appendChild(bar);
     var lastY = window.scrollY || 0;
     var ticking = false;
