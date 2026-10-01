@@ -27,8 +27,8 @@
 <link rel="alternate" hreflang="en" href="https://spinorawins.com/tools/slot-rtp-database.html">
 <link rel="alternate" hreflang="x-default" href="https://spinorawins.com/tools/slot-rtp-database.html">
 <link rel="alternate" hreflang="es" href="https://spinorawins.com/es/base-datos-rtp-tragamonedas.html">
-<link rel="stylesheet" href="/assets/css/style.css?v=20261004">
-<script defer src="../assets/js/rtp-database.js"></script>
+<link rel="stylesheet" href="/assets/css/style.css?v=20261005">
+<script defer src="../assets/js/rtp-database.js?v=20261005"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,6 +107,7 @@
     <input type="number" id="f-minrtp" placeholder="Min RTP %" step="0.1">
   </div>
 
+  <p id="rtp-summary" class="rtp-summary" aria-live="polite"></p>
   <div style="overflow-x:auto"><table class="rtp-table">
     <thead><tr><th>Slot</th><th>Provider</th><th>RTP</th><th>Volatility</th><th>Max Win</th></tr></thead>
     <tbody id="rtp-tbody"></tbody>
@@ -114,7 +115,12 @@
 
   <div id="rtp-cards" class="rtp-cards"></div>
 
-  <div class="status-box">Data shown is a sample dataset for demonstration. Production version should pull from a maintained, audited RTP dataset with per-operator verification.</div>
+  <div class="status-box"><strong>How to read this:</strong> figures are the providers&#39; default published RTP. Many games ship in several RTP versions and each casino chooses which one to run, so the number at your casino can be lower. Check the game&#39;s info screen before you play. Click a column to sort.</div>
+
+  <section>
+    <h2>Browse full slot catalogues</h2>
+    <p>Every provider hub lists all titles we cover, with artwork and a page per game: <a href="/slots/pragmatic-play/index.html">Pragmatic Play</a> · <a href="/slots/netent/index.html">NetEnt</a> · <a href="/slots/playngo/index.html">Play&#39;n GO</a> · <a href="/slots/relax-gaming/all-slots.html">Relax Gaming</a> · <a href="/slots/index.html">All providers →</a></p>
+  </section>
 
   <section>
     <h2>Related</h2>
