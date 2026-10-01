@@ -19,7 +19,7 @@ LABELS = {
         "disclaimer": "18+ | Gambling can be addictive. Play responsibly. This site contains affiliate links and earns commission from featured operators.",
         "rg_link": "Get help",
         "copyright": "&copy; 2026 Spinora Wins. Independent affiliate publisher. Not a gambling operator. Odds, bonuses and legal status vary by jurisdiction and change frequently - always confirm on the operator's site.",
-        "age_gate": "Gambling is restricted to legal age (18+/21+ depending on jurisdiction). If you or someone you know has a gambling problem, seek help: BeGambleAware (UK), National Council on Problem Gambling (US/NG resources), CVV (Brazil) 188.",
+        "age_gate": "18+ only. Gambling help: {short}.",
         "lang_missing": "This page is not translated yet - opens the {name} homepage",
     },
     "es": {
@@ -30,7 +30,7 @@ LABELS = {
         "disclaimer": "18+. Jugar puede causar adicción. Hazlo con responsabilidad. Este sitio incluye enlaces de afiliados.",
         "rg_link": "Pedir ayuda",
         "copyright": "&copy; 2026 Spinora Wins. Publicador afiliado independiente. No somos un operador de juegos. Las cuotas, bonos y la situación legal varían según la jurisdicción y cambian con frecuencia: confirma siempre los datos en el sitio del operador.",
-        "age_gate": "El juego está restringido a la mayoría de edad (18+/21+ según la jurisdicción). Si tú o alguien que conoces tiene un problema con el juego, busca ayuda: BeGambleAware (Reino Unido), National Council on Problem Gambling (EE. UU. y recursos para Nigeria), CVV (Brasil) 188.",
+        "age_gate": "Solo mayores de 18 años. Ayuda con el juego: {short}.",
         "lang_missing": "Esta página aún no está traducida: abre la portada en {name}",
     },
     "pt": {
@@ -41,7 +41,7 @@ LABELS = {
         "disclaimer": "18+. Apostar pode causar dependência. Jogue com responsabilidade. Este site contém links de afiliados.",
         "rg_link": "Buscar ajuda",
         "copyright": "&copy; 2026 Spinora Wins. Publicador afiliado independente. Não somos um operador de jogos. Odds, bônus e situação legal variam por jurisdição e mudam com frequência; confirme sempre no site do operador.",
-        "age_gate": "O jogo é restrito à idade legal (18+/21+ conforme a jurisdição). Se você ou alguém que você conhece tem problema com jogo, busque ajuda: BeGambleAware (Reino Unido), National Council on Problem Gambling (EUA/recursos NG), CVV (Brasil) 188.",
+        "age_gate": "Somente maiores de 18 anos. Ajuda com o jogo: {short}.",
         "lang_missing": "Esta página ainda não foi traduzida: abre a página inicial em {name}",
     },
 }
@@ -83,22 +83,18 @@ FOOTER = {
     "en": [
         ("Country Guides", [
             ("Casinos in Nigeria", "/online-casinos-nigeria.html"),
-            ("Casinos in Brazil", "/online-casinos-brazil.html"),
             ("Casinos in Mexico", "/online-casinos-mexico.html"),
             ("Casinos in Colombia", "/online-casinos-colombia.html"),
             ("Casinos in Kenya", "/online-casinos-kenya.html"),
             ("Casinos in South Africa", "/online-casinos-south-africa.html"),
-            ("Casinos in India", "/online-casinos-india.html"),
         ]),
         ("Best Casinos", [
             ("Top 10 Crypto Casinos", "/top-10-crypto-casinos.html"),
             ("Best in Nigeria", "/best-online-casinos-nigeria.html"),
-            ("Best in Brazil", "/best-online-casinos-brazil.html"),
             ("Best in Mexico", "/best-online-casinos-mexico.html"),
             ("Best in Colombia", "/best-online-casinos-colombia.html"),
             ("Best in Kenya", "/best-online-casinos-kenya.html"),
             ("Best in South Africa", "/best-online-casinos-south-africa.html"),
-            ("Best in India", "/best-online-casinos-india.html"),
         ]),
         ("Casino Reviews", [
             ("Cloudbet", "/cloudbet-review.html"),
@@ -113,7 +109,6 @@ FOOTER = {
             ("22Bet", "/22bet-review.html"),
         ]),
         ("Payments & Tools", [
-            ("PIX (Brazil)", "/payment-methods/pix-brazil-casinos.html"),
             ("SPEI (Mexico)", "/payment-methods/spei-mexico-casinos.html"),
             ("PSE (Colombia)", "/payment-methods/pse-colombia-casinos.html"),
             ("Crypto Payments", "/payment-methods/crypto-casinos-latam-africa.html"),
@@ -137,22 +132,18 @@ FOOTER = {
     "es": [
         ("Guías por país", [
             ("Casinos en Nigeria", "/es/casinos-online-nigeria.html"),
-            ("Casinos en Brasil", "/es/casinos-online-brasil.html"),
             ("Casinos en México", "/es/casinos-online-mexico.html"),
             ("Casinos en Colombia", "/es/casinos-online-colombia.html"),
             ("Casinos en Kenia", "/es/casinos-online-kenia.html"),
             ("Casinos en Sudáfrica", "/es/casinos-online-sudafrica.html"),
-            ("Casinos en India", "/es/casinos-online-india.html"),
         ]),
         ("Mejores casinos", [
             ("Top 10 casinos cripto", "/es/top-10-casinos-cripto.html"),
             ("Mejores en Nigeria", "/es/mejores-casinos-online-nigeria.html"),
-            ("Mejores en Brasil", "/es/mejores-casinos-online-brasil.html"),
             ("Mejores en México", "/es/mejores-casinos-online-mexico.html"),
             ("Mejores en Colombia", "/es/mejores-casinos-online-colombia.html"),
             ("Mejores en Kenia", "/es/mejores-casinos-online-kenia.html"),
             ("Mejores en Sudáfrica", "/es/mejores-casinos-online-sudafrica.html"),
-            ("Mejores en India", "/es/mejores-casinos-online-india.html"),
         ]),
         ("Reseñas de casinos", [
             ("Cloudbet", "/es/resena-cloudbet.html"),
@@ -165,7 +156,6 @@ FOOTER = {
             ("Cooked", "/es/resena-cooked.html"),
         ]),
         ("Pagos y herramientas", [
-            ("PIX en Brasil", "/es/casinos-pix-brasil.html"),
             ("SPEI en México", "/es/casinos-spei-mexico.html"),
             ("PSE en Colombia", "/es/casinos-pse-colombia.html"),
             ("Pagos con criptomonedas", "/es/casinos-cripto-latam-africa.html"),
@@ -187,22 +177,18 @@ FOOTER = {
     "pt": [
         ("Guias por país", [
             ("Cassinos na Nigéria", "/pt/cassinos-online-nigeria.html"),
-            ("Cassinos no Brasil", "/pt/cassinos-online-brasil.html"),
             ("Cassinos no México", "/pt/cassinos-online-mexico.html"),
             ("Cassinos na Colômbia", "/pt/cassinos-online-colombia.html"),
             ("Cassinos no Quênia", "/pt/cassinos-online-quenia.html"),
             ("Cassinos na África do Sul", "/pt/cassinos-online-africa-do-sul.html"),
-            ("Cassinos na Índia", "/pt/cassinos-online-india.html"),
         ]),
         ("Melhores cassinos", [
             ("Top 10 cassinos cripto", "/pt/top-10-cassinos-cripto.html"),
             ("Melhores na Nigéria", "/pt/melhores-cassinos-online-nigeria.html"),
-            ("Melhores no Brasil", "/pt/melhores-cassinos-online-brasil.html"),
             ("Melhores no México", "/pt/melhores-cassinos-online-mexico.html"),
             ("Melhores na Colômbia", "/pt/melhores-cassinos-online-colombia.html"),
             ("Melhores no Quênia", "/pt/melhores-cassinos-online-quenia.html"),
             ("Melhores na África do Sul", "/pt/melhores-cassinos-online-africa-do-sul.html"),
-            ("Melhores na Índia", "/pt/melhores-cassinos-online-india.html"),
         ]),
         ("Avaliações de cassinos", [
             ("Cloudbet", "/pt/avaliacao-cloudbet.html"),
@@ -215,7 +201,6 @@ FOOTER = {
             ("Cooked", "/pt/avaliacao-cooked.html"),
         ]),
         ("Pagamentos e ferramentas", [
-            ("PIX no Brasil", "/pt/cassinos-pix-brasil.html"),
             ("SPEI no México", "/pt/cassinos-spei-mexico.html"),
             ("PSE na Colômbia", "/pt/cassinos-pse-colombia.html"),
             ("Pagamentos com criptomoedas", "/pt/cassinos-cripto-latam-africa.html"),
@@ -235,3 +220,59 @@ FOOTER = {
         ]),
     ],
 }
+
+
+# Problem-gambling help per market (owner-verified, October 2026).
+# Rendered into the footer (short form) and the responsible-gambling pages (table).
+# Each entry: (country EN/ES/PT, [(label EN/ES/PT, value, href or None)], short footer number)
+HELPLINES = [
+    (("Nigeria", "Nigeria", "Nigéria"), [
+        (("Gamble Alert", "Gamble Alert", "Gamble Alert"), "+234 916 295 7989", "tel:+2349162957989"),
+        (None, "+234 705 889 0073", "tel:+2347058890073"),
+        (None, "+234 705 889 0074", "tel:+2347058890074"),
+        (None, "gamblealert.org", "https://gamblealert.org/"),
+    ], ("Gamble Alert", "+234 916 295 7989", "tel:+2349162957989")),
+    (("Kenya", "Kenia", "Quênia"), [
+        (("Gamhelp Kenya", "Gamhelp Kenya", "Gamhelp Kenya"), "+254 700 656 284", "tel:+254700656284"),
+        (None, "+254 725 492 006", "tel:+254725492006"),
+        (None, "gamhelpkenya.com", "https://gamhelpkenya.com/"),
+        (("Ministry of Health helpline", "Línea del Ministerio de Salud", "Linha do Ministério da Saúde"), "719", "tel:719"),
+    ], ("Gamhelp Kenya", "+254 700 656 284", "tel:+254700656284")),
+    (("South Africa", "Sudáfrica", "África do Sul"), [
+        (("Problem gambling counselling line (free, 24/7)", "Línea de ayuda por juego problemático (gratuita, 24/7)", "Linha de apoio para jogo problemático (gratuita, 24h)"), "0800 006 008", "tel:0800006008"),
+        (("WhatsApp", "WhatsApp", "WhatsApp"), "076 675 0710", "https://wa.me/27766750710"),
+        (None, "responsiblegambling.org.za", "https://responsiblegambling.org.za/"),
+    ], ("", "0800 006 008", "tel:0800006008")),
+    (("Mexico", "México", "México"), [
+        (("Línea de la Vida (24/7)", "Línea de la Vida (24/7)", "Línea de la Vida (24h)"), "800 911 2000", "tel:8009112000"),
+        (("Gambling player support (SEGOB)", "Atención a jugadores (SEGOB)", "Atendimento a jogadores (SEGOB)"), "atnjugadores@segob.mx", "mailto:atnjugadores@segob.mx"),
+    ], ("Línea de la Vida", "800 911 2000", "tel:8009112000")),
+    (("Colombia", "Colombia", "Colômbia"), [
+        (("No dedicated gambling helpline. Coljuegos \u201cJuega bien\u201d", "No hay línea específica para el juego. Coljuegos \u201cJuega bien\u201d", "Não há linha específica para jogo. Coljuegos \u201cJuega bien\u201d"), "coljuegos.gov.co", "https://www.coljuegos.gov.co/"),
+        (("Mental health line", "Línea de salud mental", "Linha de saúde mental"), "106", "tel:106"),
+    ], ("Línea", "106", "tel:106")),
+]
+LI = {"en": 0, "es": 1, "pt": 2}
+
+
+def helplines_short(lang):
+    out = []
+    for names, _, (label, num, href) in HELPLINES:
+        lab = (label + " ") if label else ""
+        out.append(f'{names[LI[lang]]} – {lab}<a href="{href}">{num}</a>')
+    return "; ".join(out)
+
+
+def helplines_table(lang):
+    k = LI[lang]
+    head = {"en": ("Country", "Where to get help"), "es": ("País", "Dónde pedir ayuda"), "pt": ("País", "Onde pedir ajuda")}[lang]
+    rows = []
+    for names, items, _ in HELPLINES:
+        parts = []
+        for lab, val, href in items:
+            ext = ' rel="noopener" target="_blank"' if href.startswith("http") else ""
+            a = f'<a href="{href}"{ext}>{val}</a>'
+            parts.append(f"{lab[k]}: {a}" if lab else a)
+        rows.append(f"      <tr><td>{names[k]}</td><td>{', '.join(parts)}</td></tr>")
+    return ("<!-- helplines:start -->\n<div class=\"table-wrap\"><table>\n"
+            f"      <tr><th>{head[0]}</th><th>{head[1]}</th></tr>\n" + "\n".join(rows) + "\n    </table></div>\n<!-- helplines:end -->")

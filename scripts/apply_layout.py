@@ -94,7 +94,7 @@ def render_footer(lang):
         f'    <nav class="footer-grid" aria-label="{L["footer_nav"]}">\n' + "\n".join(cols) + "\n    </nav>\n"
         '    <div class="footer-bottom">\n'
         f'      <p>{L["copyright"]}</p>\n'
-        f'      <p class="age-gate">{L["age_gate"]} <a href="{C.RG[lang]}">{L["rg_link"]}</a></p>\n'
+        f'      <p class="age-gate">{L["age_gate"].format(short=C.helplines_short(lang))} <a href="{C.RG[lang]}">{L["rg_link"]}</a></p>\n'
         "    </div>\n  </div>\n</footer>"
     )
 

@@ -6,8 +6,6 @@ const bonusData = [
   {casino:"BitStarz", geo:"Mexico", type:"Deposit Match + FS", pct:"100%", max:"5 BTC + 180 FS", wagering:"40x", minDep:"$20"},
   {casino:"BitStarz", geo:"Colombia", type:"Deposit Match", pct:"100%", max:"$500 + 180 FS", wagering:"40x", minDep:"$20"},
   {casino:"Cloudbet", geo:"Colombia", type:"Cash Rewards", pct:"\u2014", max:"$2,500", wagering:"None", minDep:"None"},
-  {casino:"Cloudbet", geo:"Brazil", type:"Cash Rewards", pct:"\u2014", max:"$2,500", wagering:"None", minDep:"None"},
-  {casino:"Rollbit", geo:"Brazil", type:"Rakeback", pct:"Boosted", max:"Daily/Weekly", wagering:"0x", minDep:"$10"},
   {casino:"Cloudbet", geo:"Kenya", type:"Cash Rewards", pct:"\u2014", max:"$2,500", wagering:"None", minDep:"None"},
   {casino:"Rollbit", geo:"Kenya", type:"Rakeback", pct:"Boosted", max:"Daily/Weekly", wagering:"0x", minDep:"$10"},
 ];

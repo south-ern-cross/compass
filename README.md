@@ -18,7 +18,13 @@ Pages are static HTML. Shared parts are maintained by idempotent scripts in `scr
 6. `python3 scripts/thin_content.py` – `noindex,follow` for templated slot stubs listed in `scripts/noindex-slots.txt`
 7. `python3 scripts/related_links.py` – contextual internal-link blocks
 8. `python3 scripts/build_sitemap.py` – `sitemap.xml` from indexable self-canonical pages
-9. `python3 scripts/check_site.py` – broken links, hreflang reciprocity, sitemap, h1, `/go/` rel
+9. `python3 scripts/img_dims.py` – width/height on local images
+10. `python3 scripts/author.py` – unified JSON-LD author
+11. `python3 scripts/helplines.py` – helpline table on responsible-gambling pages (data: `HELPLINES` in `site_config.py`, also used in the footer)
+12. `python3 scripts/check_site.py` – broken links, hreflang reciprocity, sitemap, h1, `/go/` rel
 
 Styles live in one file: `assets/css/style.css` (design tokens at the top). Bump `?v=` in
 `normalize_html.py` when it changes. Affiliate redirects in `go/` are never touched by the scripts.
+
+
+Retired markets (Brazil, India, October 2026): `scripts/remove_markets.py` turns the pages in `scripts/removed-pages.txt` into noindex redirect stubs and removes links to them; `scripts/market_text.py` drops those countries from "our markets" lists in copy. Run both before `related_links.py` if pages are regenerated.
