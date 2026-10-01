@@ -23,7 +23,7 @@ function calcEV(){
   } else if (ev >= -bonus * 0.25) {
     label = 'Marginal';
     text = 'Roughly break-even. Take it only if you enjoy the games anyway — there is no real edge here.';
-    color = '#a78bfa';
+    color = '#e9b860';
   } else {
     label = 'Trap';
     text = 'Negative expected value: on average you lose the bonus and then some just clearing the wagering. Skip this one.';
