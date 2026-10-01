@@ -6,7 +6,7 @@ All links are root-absolute so they work at any folder depth.
 """
 
 SITE = "https://spinorawins.com"
-LANGS = ("en", "es", "pt")
+LANGS = ("en", "es")  # "pt" retired October 2026 (scripts/retire_language.py)
 HOME = {"en": "/", "es": "/es/", "pt": "/pt/"}
 OG_LOCALE = {"en": "en_US", "es": "es_LA", "pt": "pt_BR"}
 
