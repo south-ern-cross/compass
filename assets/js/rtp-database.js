@@ -3,11 +3,11 @@ const slotData = [
   {name:"Sweet Bonanza", provider:"Pragmatic Play", rtp:96.51, volatility:"High", maxWin:21100, page:"slots/pragmatic-play/sweet-bonanza.html", img:"/assets/images/slots/pragmatic/sweet-bonanza.jpg"},
   {name:"Gates of Olympus", provider:"Pragmatic Play", rtp:96.50, volatility:"High", maxWin:5000, page:"slots/pragmatic-play/gates-of-olympus.html", img:"/assets/images/slots/pragmatic/gates-of-olympus.jpg"},
   {name:"Wolf Gold", provider:"Pragmatic Play", rtp:96.01, volatility:"Medium", maxWin:5000, page:"slots/pragmatic-play/wolf-gold.html", img:"/assets/images/slots/pragmatic/wolf-gold.jpg"},
-  {name:"Book of Dead", provider:"Play'n GO", rtp:96.21, volatility:"High", maxWin:5000},
-  {name:"Starburst", provider:"NetEnt", rtp:96.09, volatility:"Low", maxWin:500, page:"slots/netent/starburst.html"},
+  {name:"Book of Dead", provider:"Play'n GO", rtp:96.21, volatility:"High", maxWin:5000, img:"/assets/images/slots/playngo/book-of-dead.jpg"},
+  {name:"Starburst", provider:"NetEnt", rtp:96.09, volatility:"Low", maxWin:500, page:"slots/netent/starburst.html", img:"/assets/images/slots/netent/starburst.jpg"},
   {name:"Gonzo's Quest", provider:"NetEnt", rtp:95.97, volatility:"Medium", maxWin:2500, page:"slots/netent/gonzos-quest.html", img:"/assets/images/slots/netent/gonzos-quest.jpg"},
   {name:"Big Bass Bonanza", provider:"Pragmatic Play", rtp:96.71, volatility:"Medium", maxWin:2100, page:"slots/pragmatic-play/big-bass-bonanza.html", img:"/assets/images/slots/pragmatic/big-bass-bonanza.jpg"},
-  {name:"Money Train 2", provider:"Relax Gaming", rtp:96.40, volatility:"High", maxWin:50000, page:"slots/relax-gaming/money-train-2.html"},
+  {name:"Money Train 2", provider:"Relax Gaming", rtp:96.40, volatility:"High", maxWin:50000, page:"slots/relax-gaming/money-train-2.html", img:"/assets/images/slots/relax/money-train-2.jpg"},
 ];
 const LANG = (document.documentElement.lang || 'en').slice(0, 2);
 const T = {
