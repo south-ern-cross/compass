@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" role="img" aria-label="BC.GAME logo placeholder">
-<rect x="1" y="1" width="238" height="62" rx="10" fill="#161b22" stroke="#2a3340" stroke-width="2"/>
-<text x="120" y="40" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="1" fill="#e8eaed">BC.GAME</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="696" viewBox="0 0 1200 696" role="img" aria-label="BC.GAME logo placeholder">
+<rect width="1200" height="696" fill="#161b22"/>
+<text x="600" y="388" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="200" font-weight="700" letter-spacing="12" fill="#e8eaed">BC.GAME</text>
 </svg>
