@@ -27,8 +27,8 @@
 <link rel="alternate" hreflang="en" href="https://spinorawins.com/tools/slot-rtp-database.html">
 <link rel="alternate" hreflang="x-default" href="https://spinorawins.com/tools/slot-rtp-database.html">
 <link rel="alternate" hreflang="es" href="https://spinorawins.com/es/base-datos-rtp-tragamonedas.html">
-<link rel="stylesheet" href="/assets/css/style.css?v=20261004">
-<script defer src="/assets/js/rtp-database.js"></script>
+<link rel="stylesheet" href="/assets/css/style.css?v=20261005">
+<script defer src="/assets/js/rtp-database.js?v=20261005"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -110,12 +110,18 @@
     <input type="number" id="f-minrtp" placeholder="RTP mín. %" step="0.1">
   </div>
 
-  <div style="overflow-x:auto"><table>
+  <p id="rtp-summary" class="rtp-summary" aria-live="polite"></p>
+  <div style="overflow-x:auto"><table class="rtp-table">
     <thead><tr><th>Tragamonedas</th><th>Proveedor</th><th>RTP</th><th>Volatilidad</th><th>Ganancia máx.</th></tr></thead>
     <tbody id="rtp-tbody"></tbody>
   </table></div>
+  <div id="rtp-cards" class="rtp-cards"></div>
 
-  <div class="status-box">Los datos mostrados son solo de muestra. La versión final debería usar una base de datos de RTP auditada y actualizada, con verificación por operador.</div>
+  <div class="status-box"><strong>Cómo leer la tabla:</strong> son los RTP por defecto publicados por cada proveedor. Muchos juegos tienen varias versiones de RTP y cada casino elige cuál usar, así que en tu casino el número puede ser menor. Revisa la pantalla de información del juego antes de jugar. Haz clic en una columna para ordenar.</div>
+  <section>
+    <h2>Catálogos completos de tragamonedas</h2>
+    <p>Cada proveedor tiene su catálogo con todos los juegos, imágenes y una página por título: <a href="/es/slots/pragmatic-play/index.html">Pragmatic Play</a> · <a href="/es/slots/netent/index.html">NetEnt</a> · <a href="/es/slots/playngo/index.html">Play&#39;n GO</a> · <a href="/es/slots/relax-gaming/all-slots.html">Relax Gaming</a> · <a href="/es/slots/index.html">Todos los proveedores →</a></p>
+  </section>
 
   <section>
     <h2>Relacionado</h2>
