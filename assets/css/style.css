@@ -599,3 +599,12 @@ main.has-article-toplist > .container { min-width: 0; max-width: none; padding: 
 .vol-low { color: var(--success); background: var(--success-soft); }
 .vol-medium { color: var(--accent-strong); background: var(--accent-soft); }
 .vol-high { color: var(--danger); background: var(--danger-soft); }
+
+/* Main nav visual order: Top 10 Casinos, Blog, Slots, RTP Database, Tools, Payments, Responsible Gambling (2026-10-03) */
+.site-header .nav-links > li:nth-child(1) { order: 1; }
+.site-header .nav-links > li:nth-child(6) { order: 2; }
+.site-header .nav-links > li:nth-child(2) { order: 3; }
+.site-header .nav-links > li:nth-child(3) { order: 4; }
+.site-header .nav-links > li:nth-child(4) { order: 5; }
+.site-header .nav-links > li:nth-child(5) { order: 6; }
+.site-header .nav-links > li:nth-child(7) { order: 7; }
