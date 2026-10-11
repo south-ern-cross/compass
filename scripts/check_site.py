@@ -4,10 +4,19 @@ sitemap vs indexable pages, single <h1>, rel on /go/ links, and JSON-LD
 (valid JSON; page-level url / inLanguage / last breadcrumb consistent with
 the page itself).
 
+JSON-LD url rules (to avoid false positives):
+  * only top-level nodes (top object / @graph members) are checked; nested
+    objects such as itemReviewed, author, publisher are ignored;
+  * a page-level "url" is checked only if it points to this site
+    (spinorawins.com, with or without www, http or https, or a relative
+    path). External URLs (operator site etc.) are allowed;
+  * comparison ignores scheme, www, #fragment, a trailing slash and a
+    trailing index.html.
+
 Exit code 1 if ANY category has errors. Use --soft to report only (exit 0).
 Use --verbose to print up to 20 examples per category."""
 import os, re, sys, json
-from urllib.parse import unquote
+from urllib.parse import unquote, urlsplit, urljoin
 sys.path.insert(0, os.path.dirname(__file__))
 from apply_layout import iter_pages, ROOT, ALT_RE
 import site_config as C
@@ -20,6 +29,12 @@ HTML_LANG = re.compile(r'<html\b[^>]*\blang="([^"]+)"', re.I)
 PAGE_TYPES = {"Review", "WebPage", "Article", "BlogPosting", "NewsArticle",
               "FAQPage", "CollectionPage"}
 
+def _host(h):
+    h = (h or "").lower().rstrip(".")
+    return h[4:] if h.startswith("www.") else h
+
+SITE_HOST = _host(urlsplit(C.SITE).hostname)
+
 def exists(path):
     p = os.path.join(ROOT, unquote(path).lstrip("/"))
     return os.path.isfile(p) or os.path.isfile(os.path.join(p, "index.html"))
@@ -27,11 +42,35 @@ def exists(path):
 def norm(u):
     return u.replace("/index.html", "/").rstrip("/")
 
+def url_key(u):
+    """Comparable key: (host without www, path without index.html / trailing
+    slash, query). Scheme and #fragment are ignored. Relative URLs are
+    resolved against the site root."""
+    u = u.strip()
+    if not urlsplit(u).netloc:
+        u = urljoin(C.SITE + "/", u)
+    p = urlsplit(u)
+    path = unquote(p.path or "/")
+    if path.endswith("/index.html"):
+        path = path[:-len("index.html")]
+    path = path.rstrip("/") or "/"
+    return (_host(p.hostname), path, p.query)
+
+def is_internal(u):
+    p = urlsplit(u.strip())
+    if p.scheme and p.scheme.lower() not in ("http", "https"):
+        return False
+    if not p.netloc:
+        return u.strip().startswith("/")
+    return _host(p.hostname) == SITE_HOST
+
 def types(n):
     t = n.get("@type")
     return set(t) if isinstance(t, list) else {t}
 
 def ld_nodes(obj):
+    """Top-level nodes only: the object itself (or list members) and @graph
+    members. Nested objects (itemReviewed, author, ...) are not yielded."""
     if isinstance(obj, list):
         for x in obj:
             yield from ld_nodes(x)
@@ -40,7 +79,14 @@ def ld_nodes(obj):
         if "@graph" in obj:
             yield from ld_nodes(obj["@graph"])
 
-def check_jsonld(s, canon, lang, alt_urls, report):
+def check_jsonld(s, canon, lang, alt_urls, report, self_url=None):
+    """alt_urls: set of url_key() of this page's hreflang alternates."""
+    own = set()
+    if canon:
+        own.add(url_key(canon))
+    if self_url:
+        own.add(url_key(self_url))
+    alt_other = alt_urls - own
     for block in LD.findall(s):
         try:
             data = json.loads(block)
@@ -51,8 +97,10 @@ def check_jsonld(s, canon, lang, alt_urls, report):
             ts = types(n)
             if ts & PAGE_TYPES:
                 u = n.get("url")
-                if isinstance(u, str) and canon and norm(u) != norm(canon):
-                    report("jsonld", f"{'/'.join(sorted(t for t in ts if t))}.url {u} != canonical {canon}")
+                # External URLs are allowed; only internal ones must be this page.
+                if isinstance(u, str) and own and is_internal(u) and url_key(u) not in own:
+                    hint = " (another language version)" if url_key(u) in alt_other else ""
+                    report("jsonld", f"{'/'.join(sorted(t for t in ts if t))}.url {u} != canonical {canon}{hint}")
                 il = n.get("inLanguage")
                 if isinstance(il, str) and lang and il.lower().split("-")[0] != lang.lower().split("-")[0]:
                     report("jsonld", f"inLanguage {il} != <html lang> {lang}")
@@ -62,7 +110,7 @@ def check_jsonld(s, canon, lang, alt_urls, report):
                 if isinstance(it, dict):
                     it = it.get("@id")
                 # Only flag a last crumb that points to another language version of this page.
-                if isinstance(it, str) and canon and norm(it) != norm(canon) and norm(it) in alt_urls:
+                if isinstance(it, str) and own and is_internal(it) and url_key(it) in alt_other:
                     report("jsonld", f"last breadcrumb {it} is another language version, expected {canon}")
 
 def main():
@@ -102,7 +150,8 @@ def main():
         if not redirect:
             m = HTML_LANG.search(s)
             check_jsonld(s, c.group(1) if c else None, m.group(1) if m else None,
-                         {norm(u) for u in alts[rel].values()}, report)
+                         {url_key(u) for u in alts[rel].values()}, report,
+                         self_url=C.SITE + "/" + rel.replace(os.sep, "/"))
     for rel, a in alts.items():
         cur[0] = rel
         me = C.SITE + "/" + rel

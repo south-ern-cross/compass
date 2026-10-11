@@ -6,14 +6,17 @@ Review.url and last BreadcrumbList item are the EN page URL while
 inLanguage is es / pt-BR.
 
 Safety rules:
-  * only page-level nodes (Review, WebPage, Article, ...) "url" and the LAST
-    breadcrumb item are touched;
+  * only top-level page nodes (Review, WebPage, Article, ...) "url" and the
+    LAST breadcrumb item are touched; nested objects (itemReviewed, author,
+    ...) and external URLs are never touched;
   * a value is replaced ONLY if it equals one of the page's own hreflang
     alternates (i.e. it is a translation of this page) and differs from the
     page canonical; it is replaced with the canonical;
   * pages without canonical or with meta refresh are skipped;
-  * only the changed <script type="application/ld+json"> block is rewritten,
-    and the result is re-parsed before writing.
+  * the JSON-LD block is edited IN PLACE (only the affected string values
+    change, formatting and escapes are preserved). The edited block is
+    re-parsed and must equal the intended data; otherwise the block is
+    re-serialized with json.dumps as a fallback.
 
 Dry-run by default. Pass --write to modify files."""
 import os, re, sys, json
@@ -37,24 +40,33 @@ def top_nodes(obj):
         return [obj] + ([x for x in g if isinstance(x, dict)] if isinstance(g, list) else [])
     return []
 
-def fix_data(data, canon, alt_urls, log):
+def fix_data(data, canon, alt_urls, log, pairs):
+    """Mutates data. pairs collects (key, old) for in-place editing."""
     changed = False
     for n in top_nodes(data):
         ts = types(n)
         u = n.get("url")
         if ts & PAGE_TYPES and isinstance(u, str) and u != canon and u in alt_urls:
             log.append(f"url: {u} -> {canon}")
-            n["url"] = canon; changed = True
+            n["url"] = canon; changed = True; pairs.append(("url", u))
         items = n.get("itemListElement")
         if "BreadcrumbList" in ts and isinstance(items, list) and items and isinstance(items[-1], dict):
             last = items[-1]; it = last.get("item")
             if isinstance(it, str) and it != canon and it in alt_urls:
                 log.append(f"breadcrumb: {it} -> {canon}")
-                last["item"] = canon; changed = True
+                last["item"] = canon; changed = True; pairs.append(("item", it))
             elif isinstance(it, dict) and it.get("@id") != canon and it.get("@id") in alt_urls:
                 log.append(f"breadcrumb: {it['@id']} -> {canon}")
+                pairs.append(("@id", it["@id"]))
                 it["@id"] = canon; changed = True
     return changed
+
+def edit_in_place(block, pairs, canon):
+    out = block
+    for key, old in pairs:
+        pat = re.compile(r'("' + re.escape(key) + r'"\s*:\s*)"' + re.escape(old).replace("/", r"(?:/|\\/)") + '"')
+        out = pat.sub(lambda m: m.group(1) + json.dumps(canon), out)
+    return out
 
 def fix_page(s):
     if 'http-equiv="refresh"' in s:
@@ -71,11 +83,19 @@ def fix_page(s):
             data = json.loads(m.group(2))
         except ValueError:
             return m.group(0)  # leave invalid JSON for check_site.py to report
-        if not fix_data(data, canon, alt_urls, log):
+        pairs = []
+        if not fix_data(data, canon, alt_urls, log, pairs):
             return m.group(0)
-        body = json.dumps(data, ensure_ascii=False, indent=2).replace("</", "<\\/")
-        json.loads(body)
-        return m.group(1) + "\n" + body + "\n" + m.group(3)
+        body = edit_in_place(m.group(2), pairs, canon)
+        try:
+            ok = json.loads(body) == data
+        except ValueError:
+            ok = False
+        if not ok:
+            log.append("in-place edit not exact, re-serialized block")
+            body = "\n" + json.dumps(data, ensure_ascii=False, indent=2).replace("</", "<\\/") + "\n"
+            json.loads(body)
+        return m.group(1) + body + m.group(3)
 
     return LD.sub(repl, s), log
 
@@ -92,7 +112,7 @@ def main():
             for line in log:
                 print("   ", line)
             if write:
-                open(p, "w", encoding="utf-8").write(new)
+                open(p, "w", encoding="utf-8", newline="").write(new)
     print(f"{total} page(s) {'fixed' if write else 'would be fixed (dry-run, use --write)'}")
 
 if __name__ == "__main__":
