@@ -202,14 +202,10 @@ html.theme-anim, html.theme-anim * { transition: none !important; }
   border: 2px solid var(--danger); color: var(--danger); border-radius: 50%; font-weight: 800; font-size: .74rem; line-height: 1;
 }
 
-/* Floating Telegram button */
+/* Floating Telegram button - DISABLED per user order 16.10.2026 */
 .tg-float {
-  position: fixed; right: 16px; bottom: 16px; z-index: 900; display: flex; align-items: center; gap: 8px;
-  background: var(--telegram-blue); color: #fff; font-weight: 700; font-size: .88rem; padding: 11px 16px; border-radius: 999px;
-  text-decoration: none; box-shadow: 0 4px 16px rgba(31, 143, 196, .4);
+  display: none !important;
 }
-.tg-float:hover { color: #fff; filter: brightness(1.06); }
-.tg-float svg { width: 20px; height: 20px; fill: #fff; }
 
 /* 5. Components ------------------------------------------------------------ */
 .hero { background: linear-gradient(125deg, var(--hero-start) 0%, var(--bg) 56%, var(--hero-end) 100%); border-bottom: 1px solid var(--border); padding: var(--space-7) 0 var(--space-6); }
