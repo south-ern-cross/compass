@@ -82,6 +82,7 @@ NAV = {
 FOOTER = {
     "en": [
         ("Country Guides", [
+            ("Casinos in Brazil (Português)", "/pt/cassinos-online-brasil.html"),
             ("Casinos in Nigeria", "/online-casinos-nigeria.html"),
             ("Casinos in Mexico", "/online-casinos-mexico.html"),
             ("Casinos in Colombia", "/online-casinos-colombia.html"),
@@ -89,6 +90,7 @@ FOOTER = {
             ("Casinos in South Africa", "/online-casinos-south-africa.html"),
         ]),
         ("Best Casinos", [
+            ("Brazil comparison (Português)", "/pt/melhores-cassinos-online-brasil.html"),
             ("Top 10 Crypto Casinos", "/top-10-crypto-casinos.html"),
             ("Best in Nigeria", "/best-online-casinos-nigeria.html"),
             ("Best in Mexico", "/best-online-casinos-mexico.html"),
@@ -131,6 +133,7 @@ FOOTER = {
     ],
     "es": [
         ("Guías por país", [
+            ("Casinos en Brasil (português)", "/pt/cassinos-online-brasil.html"),
             ("Casinos en Nigeria", "/es/casinos-online-nigeria.html"),
             ("Casinos en México", "/es/casinos-online-mexico.html"),
             ("Casinos en Colombia", "/es/casinos-online-colombia.html"),
@@ -138,6 +141,7 @@ FOOTER = {
             ("Casinos en Sudáfrica", "/es/casinos-online-sudafrica.html"),
         ]),
         ("Mejores casinos", [
+            ("Comparativa de Brasil (português)", "/pt/melhores-cassinos-online-brasil.html"),
             ("Top 10 casinos cripto", "/es/top-10-casinos-cripto.html"),
             ("Mejores en Nigeria", "/es/mejores-casinos-online-nigeria.html"),
             ("Mejores en México", "/es/mejores-casinos-online-mexico.html"),
@@ -176,6 +180,7 @@ FOOTER = {
     ],
     "pt": [
         ("Guias por país", [
+            ("Cassinos no Brasil", "/pt/cassinos-online-brasil.html"),
             ("Cassinos na Nigéria", "/pt/cassinos-online-nigeria.html"),
             ("Cassinos no México", "/pt/cassinos-online-mexico.html"),
             ("Cassinos na Colômbia", "/pt/cassinos-online-colombia.html"),
@@ -183,6 +188,7 @@ FOOTER = {
             ("Cassinos na África do Sul", "/pt/cassinos-online-africa-do-sul.html"),
         ]),
         ("Melhores cassinos", [
+            ("Comparativo no Brasil", "/pt/melhores-cassinos-online-brasil.html"),
             ("Top 10 cassinos cripto", "/pt/top-10-cassinos-cripto.html"),
             ("Melhores na Nigéria", "/pt/melhores-cassinos-online-nigeria.html"),
             ("Melhores no México", "/pt/melhores-cassinos-online-mexico.html"),
