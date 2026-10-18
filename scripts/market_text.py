@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Drop retired markets (Brazil, India) from "our markets" enumerations in
+"""Drop the retired market (India) from "our markets" enumerations in
 page copy, e.g. "Nigeria, Brazil, Mexico and India" -> "Nigeria and Mexico".
 Lists that quote operator terms (they also name Spain, the UK, ...) are left
 as they are. Core pages only; idempotent."""
@@ -7,7 +7,7 @@ import os, re, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from apply_layout import iter_pages, ROOT
 
-RETIRED = {"Brazil", "Brasil", "India", "Índia"}
+RETIRED = {"India", "Índia"}
 NAMES = ["South Africa", "Sudáfrica", "África do Sul", "Nigeria", "Nigéria", "Kenya", "Kenia", "Quênia",
          "Mexico", "México", "Colombia", "Colômbia", "Brazil", "Brasil", "India", "Índia"]
 ART = r"(?:(?:da|do|na|no|en|em) )?"

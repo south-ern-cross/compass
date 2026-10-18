@@ -31,3 +31,11 @@ Styles live in one file: `assets/css/style.css` (design tokens at the top). Bump
 Retired markets (India, October 2026; Brazil was restored the same month and is an active target market): `scripts/remove_markets.py` turns the pages in `scripts/removed-pages.txt` into noindex redirect stubs and removes links to them; `scripts/market_text.py` drops those countries from "our markets" lists in copy. Run both before `related_links.py` if pages are regenerated.
 
 Retired language (Portuguese, October 2026, restored the same month): `python3 scripts/retire_language.py pt` turns every `/pt/` page into a noindex redirect stub to its English counterpart and removes `pt` hreflang/links. PT was restored in October 2026 (Brazil is an active target market); `LANGS` in `site_config.py` is now `("en", "es", "pt")`. Never run `retire_language.py pt` - it would destroy 5,584 live PT pages.
+
+## Market policy (owner decision, October 2026)
+
+Active GEOs: Brazil (priority), Nigeria, Kenya, Colombia, Mexico, South Africa.
+India is excluded. Do not create, translate, promote, or reactivate India-targeted casino content, including UPI casino guides. Preserve `noindex, follow` on retired India/UPI pages; exclude their URLs from Sitemap, hreflang and navigation. Country names in operator-restriction disclosures and game titles are not target-market listings.
+Brazil remains active; do not remove Brazil from market lists when applying India exclusions.
+
+Sitemap: `sitemap.xml` is an index of `sitemap-N.xml` parts (up to 4,000 URLs each). `scripts/build_sitemap.py` regenerates all parts and preserves existing URL lastmod dates across them.

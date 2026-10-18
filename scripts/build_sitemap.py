@@ -8,7 +8,7 @@ lastmod: kept from the previous sitemap when present, otherwise the date of
 the last git commit that touched the file on the base branch (real data,
 never invented).
 """
-import os, re, sys, subprocess
+import os, re, sys, subprocess, glob
 sys.path.insert(0, os.path.dirname(__file__))
 from apply_layout import iter_pages, ROOT
 import site_config as C
@@ -31,9 +31,10 @@ def git_dates():
 def main():
     old = {}
     sm = os.path.join(ROOT, "sitemap.xml")
-    if os.path.exists(sm):
-        for loc, lm in re.findall(r"<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>", open(sm).read()):
-            old[loc] = lm
+    for source in [sm] + sorted(glob.glob(os.path.join(ROOT, "sitemap-[0-9]*.xml"))):
+        if os.path.exists(source):
+            for loc, lm in re.findall(r"<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>", open(source).read()):
+                old[loc] = lm
     dates = git_dates()
     urls = []
     for rel in iter_pages():
@@ -52,11 +53,22 @@ def main():
         lm = old.get(canon) or dates.get(rel)
         urls.append((canon, lm))
     urls.sort(key=lambda u: (u[0].count("/"), u[0]))
+    # Keep sitemap parts small and retain the submitted sitemap.xml URL as an index.
+    chunks = [urls[i:i + 4000] for i in range(0, len(urls), 4000)] or [[]]
+    names = []
+    for number, chunk in enumerate(chunks, 1):
+        name = f"sitemap-{number}.xml"
+        names.append(name)
+        with open(os.path.join(ROOT, name), "w", encoding="utf-8") as f:
+            f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+            for loc, lm in chunk:
+                f.write(f"  <url><loc>{loc}</loc>" + (f"<lastmod>{lm}</lastmod>" if lm else "") + "</url>\n")
+            f.write("</urlset>\n")
     with open(sm, "w", encoding="utf-8") as f:
-        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
-        for loc, lm in urls:
-            f.write(f"  <url><loc>{loc}</loc>" + (f"<lastmod>{lm}</lastmod>" if lm else "") + "</url>\n")
-        f.write("</urlset>\n")
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for name in names:
+            f.write(f"  <sitemap><loc>{C.SITE}/{name}</loc></sitemap>\n")
+        f.write("</sitemapindex>\n")
     print("sitemap urls:", len(urls))
 
 
