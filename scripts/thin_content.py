@@ -16,6 +16,10 @@ def main():
     targets = set()
     for rel in listed:
         targets.add(rel)
+        # ES/PT slots mirror EN paths; hreflang alone missed PT after its restore
+        for lang in ("es", "pt"):
+            if os.path.isfile(os.path.join(ROOT, lang, rel)):
+                targets.add(f"{lang}/{rel}")
         s = open(os.path.join(ROOT, rel), encoding="utf-8").read(8000)
         for lang, href in ALT_RE.findall(s):
             if lang in ("es", "pt"):
