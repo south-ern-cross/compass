@@ -64,6 +64,10 @@ def main():
             for loc, lm in chunk:
                 f.write(f"  <url><loc>{loc}</loc>" + (f"<lastmod>{lm}</lastmod>" if lm else "") + "</url>\n")
             f.write("</urlset>\n")
+    # drop parts left over from a larger previous build
+    for stale in glob.glob(os.path.join(ROOT, "sitemap-[0-9]*.xml")):
+        if os.path.basename(stale) not in names:
+            os.remove(stale)
     with open(sm, "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         for name in names:
