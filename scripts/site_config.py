@@ -82,21 +82,21 @@ NAV = {
 FOOTER = {
     "en": [
         ("Country Guides", [
-            ("Casinos in Brazil (Português)", "/pt/cassinos-online-brasil.html"),
             ("Casinos in Nigeria", "/online-casinos-nigeria.html"),
             ("Casinos in Mexico", "/online-casinos-mexico.html"),
             ("Casinos in Colombia", "/online-casinos-colombia.html"),
             ("Casinos in Kenya", "/online-casinos-kenya.html"),
             ("Casinos in South Africa", "/online-casinos-south-africa.html"),
+            ("Casinos in Brazil (Português)", "/pt/cassinos-online-brasil.html"),
         ]),
         ("Best Casinos", [
-            ("Brazil comparison (Português)", "/pt/melhores-cassinos-online-brasil.html"),
             ("Top 10 Crypto Casinos", "/top-10-crypto-casinos.html"),
             ("Best in Nigeria", "/best-online-casinos-nigeria.html"),
             ("Best in Mexico", "/best-online-casinos-mexico.html"),
             ("Best in Colombia", "/best-online-casinos-colombia.html"),
             ("Best in Kenya", "/best-online-casinos-kenya.html"),
             ("Best in South Africa", "/best-online-casinos-south-africa.html"),
+            ("Brazil comparison (Português)", "/pt/melhores-cassinos-online-brasil.html"),
         ]),
         ("Casino Reviews", [
             ("Cloudbet", "/cloudbet-review.html"),
@@ -133,21 +133,21 @@ FOOTER = {
     ],
     "es": [
         ("Guías por país", [
-            ("Casinos en Brasil (português)", "/pt/cassinos-online-brasil.html"),
             ("Casinos en Nigeria", "/es/casinos-online-nigeria.html"),
             ("Casinos en México", "/es/casinos-online-mexico.html"),
             ("Casinos en Colombia", "/es/casinos-online-colombia.html"),
             ("Casinos en Kenia", "/es/casinos-online-kenia.html"),
             ("Casinos en Sudáfrica", "/es/casinos-online-sudafrica.html"),
+            ("Casinos en Brasil (português)", "/pt/cassinos-online-brasil.html"),
         ]),
         ("Mejores casinos", [
-            ("Comparativa de Brasil (português)", "/pt/melhores-cassinos-online-brasil.html"),
             ("Top 10 casinos cripto", "/es/top-10-casinos-cripto.html"),
             ("Mejores en Nigeria", "/es/mejores-casinos-online-nigeria.html"),
             ("Mejores en México", "/es/mejores-casinos-online-mexico.html"),
             ("Mejores en Colombia", "/es/mejores-casinos-online-colombia.html"),
             ("Mejores en Kenia", "/es/mejores-casinos-online-kenia.html"),
             ("Mejores en Sudáfrica", "/es/mejores-casinos-online-sudafrica.html"),
+            ("Comparativa de Brasil (português)", "/pt/melhores-cassinos-online-brasil.html"),
         ]),
         ("Reseñas de casinos", [
             ("Cloudbet", "/es/resena-cloudbet.html"),
@@ -180,21 +180,21 @@ FOOTER = {
     ],
     "pt": [
         ("Guias por país", [
-            ("Cassinos no Brasil", "/pt/cassinos-online-brasil.html"),
             ("Cassinos na Nigéria", "/pt/cassinos-online-nigeria.html"),
             ("Cassinos no México", "/pt/cassinos-online-mexico.html"),
             ("Cassinos na Colômbia", "/pt/cassinos-online-colombia.html"),
             ("Cassinos no Quênia", "/pt/cassinos-online-quenia.html"),
             ("Cassinos na África do Sul", "/pt/cassinos-online-africa-do-sul.html"),
+            ("Cassinos no Brasil", "/pt/cassinos-online-brasil.html"),
         ]),
         ("Melhores cassinos", [
-            ("Comparativo no Brasil", "/pt/melhores-cassinos-online-brasil.html"),
             ("Top 10 cassinos cripto", "/pt/top-10-cassinos-cripto.html"),
             ("Melhores na Nigéria", "/pt/melhores-cassinos-online-nigeria.html"),
             ("Melhores no México", "/pt/melhores-cassinos-online-mexico.html"),
             ("Melhores na Colômbia", "/pt/melhores-cassinos-online-colombia.html"),
             ("Melhores no Quênia", "/pt/melhores-cassinos-online-quenia.html"),
             ("Melhores na África do Sul", "/pt/melhores-cassinos-online-africa-do-sul.html"),
+            ("Comparativo no Brasil", "/pt/melhores-cassinos-online-brasil.html"),
         ]),
         ("Avaliações de cassinos", [
             ("Cloudbet", "/pt/avaliacao-cloudbet.html"),
