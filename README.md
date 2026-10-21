@@ -38,4 +38,4 @@ Active GEOs: Brazil (priority), Nigeria, Kenya, Colombia, Mexico, South Africa.
 India is excluded. Do not create, translate, promote, or reactivate India-targeted casino content, including UPI casino guides. Preserve `noindex, follow` on retired India/UPI pages; exclude their URLs from Sitemap, hreflang and navigation. Country names in operator-restriction disclosures and game titles are not target-market listings.
 Brazil remains active; do not remove Brazil from market lists when applying India exclusions.
 
-Sitemap: `sitemap.xml` is an index of `sitemap-N.xml` parts (up to 4,000 URLs each). `scripts/build_sitemap.py` regenerates all parts and preserves existing URL lastmod dates across them.
+Sitemap: `sitemap.xml` is an index of `sitemap-N.xml` parts (up to 4,000 URLs each). `scripts/build_sitemap.py` regenerates all parts and preserves existing URL lastmod dates across them. Never write `sitemap.xml` or its parts by hand: after adding pages run `build_sitemap.py`; `check_site.py` fails if `sitemap.xml` is not an index.

@@ -161,7 +161,18 @@ def main():
                 report("hreflang", f"{lang} -> {u} does not link back")
     cur[0] = "sitemap.xml"
     sm_path = os.path.join(ROOT, "sitemap.xml")
-    sm = set(re.findall(r"<loc>([^<]+)</loc>", open(sm_path, encoding="utf-8").read())) if os.path.isfile(sm_path) else set()
+    sm_xml = open(sm_path, encoding="utf-8").read() if os.path.isfile(sm_path) else ""
+    sm = set()
+    if "<sitemapindex" in sm_xml:
+        # sitemap.xml is an index: collect URLs from the sitemap-N.xml parts it lists
+        for part in re.findall(r"<loc>([^<]+)</loc>", sm_xml):
+            part_path = os.path.join(ROOT, part.rsplit("/", 1)[-1])
+            if not os.path.isfile(part_path):
+                report("sitemap", f"index lists missing part: {part}")
+                continue
+            sm |= set(re.findall(r"<loc>([^<]+)</loc>", open(part_path, encoding="utf-8").read()))
+    else:
+        report("sitemap", "sitemap.xml must be an index of sitemap-N.xml parts; run scripts/build_sitemap.py, never edit it by hand")
     nz = lambda u: u.replace("/index.html", "/")
     sm_n = {nz(u) for u in sm}; ix_n = {nz(u) for u in indexable}
     for u in sorted(sm_n - ix_n):
