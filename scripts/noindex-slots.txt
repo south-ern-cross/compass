@@ -1485,7 +1485,6 @@ slots/hacksaw/gronks-gems.html
 slots/hacksaw/hand-of-anubis.html
 slots/hacksaw/harvest-wilds.html
 slots/hacksaw/holy-heist.html
-slots/hacksaw/home-of-thor.html
 slots/hacksaw/hoot-shot-the-sheriff.html
 slots/hacksaw/hopnpop.html
 slots/hacksaw/hounds-of-hell.html
@@ -1613,7 +1612,6 @@ slots/netent/golden-goose-megaways.html
 slots/netent/golden-wheels-of-egypt.html
 slots/netent/gonzos-gold.html
 slots/netent/gonzos-quest-2-return-of-the-el-dorado.html
-slots/netent/gonzos-quest.html
 slots/netent/gordon-ramsay-hells-kitchen.html
 slots/netent/guns-n-roses.html
 slots/netent/hall-of-gods.html
@@ -1664,7 +1662,6 @@ slots/netent/scruffy-duck.html
 slots/netent/scudamores-super-stakes.html
 slots/netent/secret-of-the-stones.html
 slots/netent/secrets-of-atlantis.html
-slots/netent/secrets-of-christmas.html
 slots/netent/silverback-gold.html
 slots/netent/space-wars-2.html
 slots/netent/space-wars.html
@@ -1682,7 +1679,6 @@ slots/netent/the-invisible-man.html
 slots/netent/the-wish-master.html
 slots/netent/the-wolfs-bane.html
 slots/netent/trollpot-5000.html
-slots/netent/turn-your-fortune.html
 slots/netent/twin-spin-megaways.html
 slots/netent/twin-spin.html
 slots/netent/twister.html
@@ -1705,14 +1701,12 @@ slots/nolimit-city/bizarre.html
 slots/nolimit-city/blood-diamond.html
 slots/nolimit-city/blood-shadow-2.html
 slots/nolimit-city/bonus-bunnies.html
-slots/nolimit-city/book-of-shadows.html
 slots/nolimit-city/bounty-hunters.html
 slots/nolimit-city/breakout.html
 slots/nolimit-city/brick-snake-2000.html
 slots/nolimit-city/brute-force-alien-onslaught.html
 slots/nolimit-city/brute-force.html
 slots/nolimit-city/buffalo-hunter.html
-slots/nolimit-city/bushido-ways-xnudge.html
 slots/nolimit-city/casino-win-spin.html
 slots/nolimit-city/catfish-hunters.html
 slots/nolimit-city/coins-of-fortune.html
@@ -1724,7 +1718,6 @@ slots/nolimit-city/dead-canary.html
 slots/nolimit-city/dead-dead-or-deader.html
 slots/nolimit-city/dead-men-walking.html
 slots/nolimit-city/deadwood-rip.html
-slots/nolimit-city/deadwood-xnudge.html
 slots/nolimit-city/devils-crossroad.html
 slots/nolimit-city/disorder.html
 slots/nolimit-city/disturbed.html
@@ -1762,13 +1755,10 @@ slots/nolimit-city/land-of-the-free.html
 slots/nolimit-city/legion-x.html
 slots/nolimit-city/little-bighorn.html
 slots/nolimit-city/loner.html
-slots/nolimit-city/manhattan-goes-wild.html
 slots/nolimit-city/mayan-magic-wildfire.html
 slots/nolimit-city/mental-2.html
-slots/nolimit-city/mental.html
 slots/nolimit-city/milky-ways.html
 slots/nolimit-city/misery-mining.html
-slots/nolimit-city/monkeys-gold-xpays.html
 slots/nolimit-city/munchies.html
 slots/nolimit-city/nine-to-five.html
 slots/nolimit-city/outsourced-payday.html
@@ -1781,7 +1771,6 @@ slots/nolimit-city/possessed.html
 slots/nolimit-city/punk-rocker-2.html
 slots/nolimit-city/punk-rocker-3.html
 slots/nolimit-city/punk-rocker.html
-slots/nolimit-city/punk-toilet.html
 slots/nolimit-city/remember-gulag.html
 slots/nolimit-city/road-rage.html
 slots/nolimit-city/roadkill.html
@@ -1804,11 +1793,9 @@ slots/nolimit-city/the-border.html
 slots/nolimit-city/the-cage.html
 slots/nolimit-city/the-creepy-carnival.html
 slots/nolimit-city/the-crypt-2.html
-slots/nolimit-city/the-crypt.html
 slots/nolimit-city/the-rave.html
 slots/nolimit-city/tombstone-begins.html
 slots/nolimit-city/tombstone-no-mercy.html
-slots/nolimit-city/tombstone-rip.html
 slots/nolimit-city/tombstone-slaughter-el-gordos-revenge.html
 slots/nolimit-city/tombstone.html
 slots/nolimit-city/tractor-beam.html
@@ -1818,7 +1805,6 @@ slots/nolimit-city/true-kult.html
 slots/nolimit-city/tsar-wars.html
 slots/nolimit-city/ugliest-catch.html
 slots/nolimit-city/walk-of-shame.html
-slots/nolimit-city/warrior-graveyard-xnudge.html
 slots/nolimit-city/whacked.html
 slots/nolimit-city/wixx.html
 slots/nolimit-city/xways-hoarder-2.html
@@ -1853,7 +1839,6 @@ slots/playngo/beasts-of-fire.html
 slots/playngo/big-win-777.html
 slots/playngo/big-win-cat-pawsperity.html
 slots/playngo/black-mamba.html
-slots/playngo/blazin-bullfrog.html
 slots/playngo/blazing-dragon-fortunes.html
 slots/playngo/blinged.html
 slots/playngo/boat-bonanza-christmas.html
@@ -1867,7 +1852,6 @@ slots/playngo/buildin-bucks.html
 slots/playngo/buildin-even-more-bucks.html
 slots/playngo/buildin-more-bucks-high-limit.html
 slots/playngo/buildin-more-bucks.html
-slots/playngo/bull-in-a-china-shop.html
 slots/playngo/bull-in-a-rodeo.html
 slots/playngo/bullion-xpress.html
 slots/playngo/candy-island-princess.html
@@ -1955,7 +1939,6 @@ slots/playngo/gargantoonz.html
 slots/playngo/gates-of-troy.html
 slots/playngo/gemix-100.html
 slots/playngo/gemix-2.html
-slots/playngo/gemix.html
 slots/playngo/gerards-gambit.html
 slots/playngo/ghost-of-dead.html
 slots/playngo/gigantoonz.html
@@ -2003,7 +1986,6 @@ slots/playngo/invading-vegas-revenge-on-mars.html
 slots/playngo/invading-vegas.html
 slots/playngo/irish-gold.html
 slots/playngo/iron-girl.html
-slots/playngo/jade-magician.html
 slots/playngo/jewel-box.html
 slots/playngo/joker-flip.html
 slots/playngo/jolly-roger-2.html
@@ -2016,7 +1998,6 @@ slots/playngo/kings-mask-eclipse-of-gods.html
 slots/playngo/kings-mask.html
 slots/playngo/lab-of-madness-its-a-wild.html
 slots/playngo/lady-of-fortune-destiny-spins.html
-slots/playngo/lady-of-fortune-remastered.html
 slots/playngo/lady-of-fortune.html
 slots/playngo/lawn-n-complete-disorder.html
 slots/playngo/lawn-n-disorder.html
@@ -2051,7 +2032,6 @@ slots/playngo/mandalay-bay-riches.html
 slots/playngo/manta-mayhem.html
 slots/playngo/matsuri.html
 slots/playngo/medusas-madness.html
-slots/playngo/mega-don-triple-threat.html
 slots/playngo/mega-don.html
 slots/playngo/merlin-and-the-ice-queen-morgana.html
 slots/playngo/merlin-realm-of-charm.html
