@@ -322,7 +322,6 @@ slots/hacksaw/slayers-inc.html
 slots/hacksaw/smoking-dragon.html
 slots/hacksaw/spear-of-athena.html
 slots/hacksaw/steamrunners.html
-slots/hacksaw/sun-princess.html
 slots/hacksaw/superstar-sevens.html
 slots/hacksaw/supreme-zeus.html
 slots/hacksaw/temple-of-torment.html
