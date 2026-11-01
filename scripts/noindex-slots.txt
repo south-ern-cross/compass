@@ -381,7 +381,6 @@ slots/netent/lucky-8-line.html
 slots/netent/mexican-standoff.html
 slots/netent/monopoly-money-line.html
 slots/netent/motorhead.html
-slots/netent/nunchucks.html
 slots/netent/ozzy-osbourne.html
 slots/netent/planet-of-the-apes.html
 slots/netent/reel-rush-2.html
