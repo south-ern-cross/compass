@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Apply / remove noindex,follow on templated slot stubs listed in
-scripts/noindex-slots.txt (EN paths; ES/PT counterparts follow hreflang).
+scripts/noindex-slots.txt (EN paths; ES/PT counterparts follow hreflang)
+and scripts/noindex-slots-literal.txt (paths applied exactly as written,
+no hreflang expansion, no language twins).
 Pages stay online and crawlable (follow), they just leave the index and the
 sitemap until they get real artwork and unique copy."""
 import os, re, sys
@@ -24,6 +26,12 @@ def main():
         for lang, href in ALT_RE.findall(s):
             if lang in ("es", "pt"):
                 targets.add(href.replace(C.SITE + "/", ""))
+    # Literal entries: applied exactly as written, no hreflang expansion and
+    # no language twins. Used for package A (ES/PT slots without impressions),
+    # where expanding would also close ES pages that do have impressions.
+    literal_path = os.path.join(ROOT, "scripts/noindex-slots-literal.txt")
+    if os.path.isfile(literal_path):
+        targets |= {l.strip() for l in open(literal_path) if l.strip() and not l.startswith("#")}
     n = 0
     for rel in iter_pages():
         if "/slots/" not in "/" + rel:
